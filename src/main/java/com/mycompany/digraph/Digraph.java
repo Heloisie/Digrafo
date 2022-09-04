@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package com.mycompany.digraph;
+
+import java.io.IOException;
 
 /**
  *
@@ -11,7 +8,9 @@ package com.mycompany.digraph;
  */
 public class Digraph {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public static void main(String[] args) throws IOException {
+        Controller controller1;
+        controller1 = new Controller();
+        controller1.createTextConversion();
     }
 }
