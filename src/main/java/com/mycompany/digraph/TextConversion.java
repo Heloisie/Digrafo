@@ -90,9 +90,4 @@ public class TextConversion {
         }
         return FileWords;
     }
-    
-    /**ISSO É NO TEXTCONVERSION OU NO FILE TRANSFORM ????? */
-    public void createTreeMap(){
-        
-    }
 }
