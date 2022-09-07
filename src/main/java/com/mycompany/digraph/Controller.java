@@ -21,7 +21,10 @@ public class Controller {
         textConversion1 = new TextConversion();
         String pathScanned = textConversion1.readPathFile();
         textConversion1.setPathFile(pathScanned);
-        textConversion1.readFile();
+        
+        // **TEMPORÁRIO** ATÉ FINALIZAÇÃO DA CLASSE FileTransform
+        FileTransform.createTreeMap(textConversion1.readFile());
+        //textConversion1.readFile();
     }
-    
+     
 }
