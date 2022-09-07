@@ -3,9 +3,7 @@ package com.mycompany.digraph;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.Normalizer;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 import java.util.ArrayList;
 
 /**Class to the conversion of the text in the file
@@ -59,10 +57,7 @@ public class TextConversion {
         value = value.toLowerCase(); /**transform all string in lower case*/
         value = value.replaceAll("\\p{Punct}", ""); /**remove all punctuation*/
         
-        /**remove all accent*/
-        value = Normalizer.normalize(value, Normalizer.Form.NFD); 
-        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-        value = pattern.matcher(value).replaceAll("");
+        /**split by spaces*/
         String[] StringWords = value.split("\\s");
         return StringWords;
     }
