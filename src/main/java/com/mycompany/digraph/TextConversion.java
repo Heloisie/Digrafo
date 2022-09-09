@@ -39,17 +39,6 @@ public class TextConversion {
     public TextConversion() {
     }
     
-    /**Method that read the path to the file that is going to convert and return it
-    * @return String - pathScanned*/
-    public String readPathFile() {
-        System.out.println("Digite o caminho: ");
-        /**Using Scanner for Getting Input from User*/
-        Scanner in = new Scanner(System.in);
- 
-        String pathScanned = in.nextLine();
-        return pathScanned;
-    }
-    
     /**Method that format the String parameter
     * @param value String - sting to be formated
     * @return String - StringWords*/
@@ -65,7 +54,7 @@ public class TextConversion {
     /**Method that read a file and return an ArrayList with all the formated words
     * @return String - FileWords
     * @throws java.io.IOException*/
-    public ArrayList<String> readFile() throws IOException {
+    public ArrayList<String> readFile() {
         ArrayList<String> FileWords = new ArrayList<>();
         try (BufferedReader buffRead = new BufferedReader(new FileReader(this.pathFile))) {
             String linha = "";
@@ -83,6 +72,11 @@ public class TextConversion {
             }
             System.out.println(FileWords);
         }
+        catch(IOException e){
+        System.out.println("Something went wrong");
+        System.out.println(e.toString());
+        }
         return FileWords;
+        
     }
 }

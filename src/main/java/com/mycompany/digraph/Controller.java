@@ -17,14 +17,10 @@ public class Controller {
     /**Method that calls TextConversion object and its method
      * @throws java.io.IOException*/
     public void createTextConversion() throws IOException{
-        TextConversion textConversion1;
-        textConversion1 = new TextConversion();
-        String pathScanned = textConversion1.readPathFile();
-        textConversion1.setPathFile(pathScanned);
-        
-        // **TEMPORÁRIO** ATÉ FINALIZAÇÃO DA CLASSE FileTransform
-        FileTransform.createTreeMap(textConversion1.readFile());
-        //textConversion1.readFile();
+        //Calling interface
+         MyFrame frame = new MyFrame();
+         frame.setVisible(true);
+    
     }
      
 }
