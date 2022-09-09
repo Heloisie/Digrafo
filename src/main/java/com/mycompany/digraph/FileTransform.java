@@ -4,8 +4,11 @@
  */
 package com.mycompany.digraph;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Map;
 import java.util.TreeMap;
 
 /**Class to create the CSV file using a Tree Map
@@ -14,23 +17,7 @@ import java.util.TreeMap;
  * @version 1.0
  */
 public class FileTransform {
-    /**Atributes*/
-    private String pathCSVfile;
-    
     /**Methods*/
-    
-    /**Gets the path of the CSV file
-    * @return String - pathCSVFile*/
-    public String getPathCSVfile() {
-        return pathCSVfile;
-    }
-
-    /**Sets the path of the CSV file
-    * @param pathCSVfile String - path of the choosen file*/
-    public void setPathCSVfile(String pathCSVfile) {
-        this.pathCSVfile = pathCSVfile;
-    }
-
     /**Sorts the value (String) of an element in a Tree Map.
      * @param treeMap Tree Map to be sorted.
      * @param key Key of the value to be sorted.
@@ -74,6 +61,23 @@ public class FileTransform {
             
             System.out.println(digraphs);
             return digraphs;
+        }
+    }
+    /**Creates the CSV file and writes on it
+     * @param fileWords The Array List to be used.
+     * @param pathCSVfile the path to the file the would be writed
+     * @return void
+     */
+    public static void createCSVFile(TreeMap<String, String> text, String pathCSVfile) throws IOException {
+        try {
+            FileWriter writer = new FileWriter(pathCSVfile);
+            for(Map.Entry<String, String> entry : text.entrySet()) {
+                writer.write(entry.getKey() + ", " + entry.getValue() + "\n");
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Error occured in CSV File creation");
+            e.printStackTrace();
         }
     }
 }
