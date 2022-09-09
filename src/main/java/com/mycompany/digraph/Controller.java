@@ -1,9 +1,12 @@
 package com.mycompany.digraph;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.TreeMap;
 
 /**Controller Class
 * @author Iara
+* @author Brenda
 * @version 1.0
 */
 public class Controller {
@@ -11,20 +14,22 @@ public class Controller {
     /**Methods*/
     
     /**Empty Constructor*/
-    public Controller() {
-    }
+    public Controller() {}
     
     /**Method that calls TextConversion object and its method
-     * @throws java.io.IOException*/
-    public void createTextConversion() throws IOException{
-        TextConversion textConversion1;
-        textConversion1 = new TextConversion();
-        String pathScanned = textConversion1.readPathFile();
-        textConversion1.setPathFile(pathScanned);
+     * @throws java.io.IOException
+     * */
+    public static void createTextConversion() throws IOException{
+        ArrayList<String> pathScanned = TextConversion.readPathFile();
         
-        // **TEMPORÁRIO** ATÉ FINALIZAÇÃO DA CLASSE FileTransform
-        FileTransform.createTreeMap(textConversion1.readFile());
-        //textConversion1.readFile();
+        for (int i = 0; i < pathScanned.size(); i++) {
+            //create a path for the new file with the same name
+            String pathCSV = pathScanned.get(i).replace(".txt", ".csv");
+            
+            TreeMap<String, String> text = FileTransform.createTreeMap(
+                TextConversion.readFile(pathScanned.get(i)));
+            FileTransform.createCSVFile(text, pathCSV);
+        }
     }
      
 }
