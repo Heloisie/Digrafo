@@ -1,8 +1,9 @@
 package com.mycompany.digraph;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -55,7 +56,7 @@ public class TextConversion {
     */
     public static ArrayList<String> readFile(String pathFileS) throws IOException {
         ArrayList<String> FileWords = new ArrayList<>();
-        try (BufferedReader buffRead = new BufferedReader(new FileReader(pathFileS))) {
+        try (BufferedReader buffRead = new BufferedReader(new InputStreamReader(new FileInputStream(pathFileS), "UTF-8"))) {
             String linha = "";
             while (true) {
                 if (linha != null) {
