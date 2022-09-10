@@ -72,6 +72,11 @@ public class TextConversion {
             }
             System.out.println(FileWords);
         }
+        catch(IOException e){
+        System.out.println("Something went wrong");
+        System.out.println(e.toString());
+        }
         return FileWords;
+        
     }
 }
