@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
 
+import javax.swing.JOptionPane;
+
 /**Class to create the CSV file using a Tree Map
  * @author Brenda
  * @author Yuri
@@ -75,6 +77,8 @@ public class FileTransform {
                 writer.write(entry.getKey() + ", " + entry.getValue() + "\n");
             }
             writer.close();
+            JOptionPane.showMessageDialog(null, "O arquivo CSV foi criado verifique o diretorio files",
+            "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
             System.out.println("Error occured in CSV File creation");
             e.printStackTrace();
