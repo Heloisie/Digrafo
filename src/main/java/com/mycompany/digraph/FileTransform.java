@@ -68,7 +68,7 @@ public class FileTransform {
      * @param pathCSVfile the path to the file the would be writed
      * @return void
      */
-    public static void createCSVFile(TreeMap<String, String> text, String pathCSVfile) throws IOException {
+    public static void createCSVFile(TreeMap<String, String> text, String pathCSVfile){
         try {
             FileWriter writer = new FileWriter(pathCSVfile);
             for(Map.Entry<String, String> entry : text.entrySet()) {

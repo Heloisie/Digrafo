@@ -19,8 +19,8 @@ public class Controller {
     /**Method that calls TextConversion object and its method
      * @throws java.io.IOException
      * */
-    public static void createTextConversion() throws IOException{
-        ArrayList<String> pathScanned = TextConversion.readPathFile();
+    public static void createTextConversion(String path){
+        ArrayList<String> pathScanned = TextConversion.readPathFile(path);
         
         for (int i = 0; i < pathScanned.size(); i++) {
             //create a path for the new file with the same name
@@ -30,6 +30,11 @@ public class Controller {
                 TextConversion.readFile(pathScanned.get(i)));
             FileTransform.createCSVFile(text, pathCSV);
         }
+    }
+
+    public static void createView(){
+        MyFrame frame= new MyFrame();
+        frame.setVisible(true);
     }
      
 }

@@ -1,14 +1,16 @@
 package com.mycompany.digraph;
 
+import java.io.IOError;
+import java.io.IOException;
 
 /**
  *
  * @author Baia
+ * @author Heloisie
  */
 public class MyFrame extends javax.swing.JFrame {
 
     
-        
     /**
      * Creates new form MeuFrame
      */
@@ -48,7 +50,7 @@ public class MyFrame extends javax.swing.JFrame {
         btn_send.setText("Send");
         btn_send.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sendActionPerformed(evt);
+                    btn_sendActionPerformed(evt);
             }
         });
 
@@ -84,15 +86,13 @@ public class MyFrame extends javax.swing.JFrame {
     private void btn_sendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sendActionPerformed
 
         String userText=input_Text.getText();
-
-        TextConversion textConversion1;
-        textConversion1 = new TextConversion();
-        textConversion1.setPathFile(userText);
-        
-        FileTransform.createTreeMap(textConversion1.readFile());
+        Controller.createTextConversion(userText);
+       
      
         
     }//GEN-LAST:event_btn_sendActionPerformed
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_send;
