@@ -2,6 +2,7 @@ package com.mycompany.digraph;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
+import javax.swing.JOptionPane;
 
 /**Controller Class
 * @author Iara
@@ -25,10 +26,15 @@ public class Controller {
             ArrayList<String> FileContent = TextConversion.readFile(pathScanned.get(i));
             
             if(!FileContent.isEmpty()){
-                //create a path for the new file with the same name
-                String pathCSV = pathScanned.get(i).replace(".txt", ".csv");
-                TreeMap<String, String> text = FileTransform.createTreeMap(FileContent);
-                FileTransform.createCSVFile(text, pathCSV);
+                if(FileContent.size()==1){
+                    JOptionPane.showMessageDialog(null, "O arquivo contém uma única palavra, são necessárias pelo menos duas para a criação do CSV!",
+                        "Erro", JOptionPane.ERROR_MESSAGE);
+                }else{
+                    //create a path for the new file with the same name
+                    String pathCSV = pathScanned.get(i).replace(".txt", ".csv");
+                    TreeMap<String, String> text = FileTransform.createTreeMap(FileContent);
+                    FileTransform.createCSVFile(text, pathCSV);
+                }
             }
         }
     }

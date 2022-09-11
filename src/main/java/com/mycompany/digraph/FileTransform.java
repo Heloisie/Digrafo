@@ -44,29 +44,24 @@ public class FileTransform {
      * @return TreeMap - digraphs
      */
     public static TreeMap<String, String> createTreeMap(ArrayList<String> fileWords) {
-        
-        if (fileWords.size() == 1) {
-            return null;
-        } else {
-            TreeMap<String, String> digraphs = new TreeMap<>();
+        TreeMap<String, String> digraphs = new TreeMap<>();
 
-            for (int i = 0; i < fileWords.size() - 1; i++) {
-                // If there is no key with this word yet
-                if (!digraphs.containsKey(fileWords.get(i))) {
-                    digraphs.put(fileWords.get(i), fileWords.get(i + 1));                
-                } else {                    
-                    /* A word is added to a node only if it is not already
-                    linked to that particular node */
-                    if (!digraphs.get(fileWords.get(i)).contains(fileWords.get(i+1))){
-                        digraphs.replace(fileWords.get(i), digraphs.get(
-                                fileWords.get(i)) + "," + fileWords.get(i + 1));
-                        
-                        sortTreeMapValues(digraphs, fileWords.get(i));
-                    }
+        for (int i = 0; i < fileWords.size() - 1; i++) {
+            // If there is no key with this word yet
+            if (!digraphs.containsKey(fileWords.get(i))) {
+                digraphs.put(fileWords.get(i), fileWords.get(i + 1));                
+            } else {                    
+                /* A word is added to a node only if it is not already
+                linked to that particular node */
+                if (!digraphs.get(fileWords.get(i)).contains(fileWords.get(i+1))){
+                    digraphs.replace(fileWords.get(i), digraphs.get(
+                            fileWords.get(i)) + "," + fileWords.get(i + 1));
+
+                    sortTreeMapValues(digraphs, fileWords.get(i));
                 }
             }
-            return digraphs;
         }
+        return digraphs;
     }
     
     /**Creates the CSV file and writes on it
