@@ -80,8 +80,8 @@ public class FileTransform {
             JOptionPane.showMessageDialog(null, "O arquivo CSV foi criado verifique o diretorio files",
             "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
-            System.out.println("Error occured in CSV File creation");
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "O programa não foi capaz de criar o arquivo CSV",
+            "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
