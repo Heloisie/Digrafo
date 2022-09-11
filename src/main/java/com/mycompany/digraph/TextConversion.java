@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 import java.util.ArrayList;
@@ -26,8 +24,8 @@ public class TextConversion {
     }
 
     /**
-     * Method that read the path to the file that is going to convert and return it
-     * 
+     * Method that read the path to the files that is going to convert and return it
+     * @param path String - path to the txt file
      * @return String - pathScanned
      */
     public static ArrayList<String> readPathFile(String path) {
@@ -44,7 +42,6 @@ public class TextConversion {
 
     /**
      * Method that format the String parameter
-     * 
      * @param value String - sting to be formated
      * @return String - StringWords
      */
@@ -59,9 +56,8 @@ public class TextConversion {
 
     /**
      * Method that read a file and return an ArrayList with all the formated words
-     * 
+     * @param pathFileS String - path to the txt file
      * @return String - FileWords
-     * @throws java.io.IOException
      */
     public static ArrayList<String> readFile(String pathFileS){
         ArrayList<String> FileWords = new ArrayList<>();
@@ -80,9 +76,8 @@ public class TextConversion {
                     break;
                 linha = buffRead.readLine();
             }
-            System.out.println(FileWords);
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "O programa não foi capaz de encontrar o arquivo especificado",
+            JOptionPane.showMessageDialog(null, "O programa não foi capaz de encontrar o arquivo " + pathFileS + "\nOBS. Seu arquivo CSV não foi criado!",
             "Erro", JOptionPane.ERROR_MESSAGE);
         }
         return FileWords;

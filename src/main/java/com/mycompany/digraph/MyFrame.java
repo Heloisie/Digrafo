@@ -1,10 +1,7 @@
 package com.mycompany.digraph;
 
-import java.io.IOError;
-import java.io.IOException;
-
 /**
- *
+ * Frame Class
  * @author Baia
  * @author Heloisie
  */
@@ -40,7 +37,7 @@ public class MyFrame extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        t_message.setText("Archive names (comma separated):");
+        t_message.setText("Archive names (comma separated - NO spaces after comma):");
 
         input_Text.setColumns(20);
         input_Text.setRows(5);
@@ -50,7 +47,7 @@ public class MyFrame extends javax.swing.JFrame {
         btn_send.setText("Send");
         btn_send.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    btn_sendActionPerformed(evt);
+                btn_sendActionPerformed(evt);
             }
         });
 
@@ -60,11 +57,10 @@ public class MyFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(btn_send)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(t_message)
-                        .addComponent(input_area, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(t_message, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(input_area, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
@@ -86,10 +82,8 @@ public class MyFrame extends javax.swing.JFrame {
     private void btn_sendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sendActionPerformed
 
         String userText=input_Text.getText();
-        Controller.createTextConversion(userText);
-       
-     
-        
+        InitProgram.callController(userText);
+        input_Text.setText("");
     }//GEN-LAST:event_btn_sendActionPerformed
 
 

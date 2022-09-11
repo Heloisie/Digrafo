@@ -1,0 +1,50 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'18'
+-sourcepath
+'E:/Unicamp/4Semestre/POO2/Projeto1/Teste/digraph/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/Unicamp/4Semestre/POO2/Projeto1/Teste/digraph/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'digraph 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'digraph 1.0-SNAPSHOT API'
+com.mycompany.digraph
+'E:/Unicamp/4Semestre/POO2/Projeto1/Teste/digraph/src/main/java/com/mycompany/digraph/Controller.java'
+'E:/Unicamp/4Semestre/POO2/Projeto1/Teste/digraph/src/main/java/com/mycompany/digraph/FileTransform.java'
+'E:/Unicamp/4Semestre/POO2/Projeto1/Teste/digraph/src/main/java/com/mycompany/digraph/InitProgram.java'
+'E:/Unicamp/4Semestre/POO2/Projeto1/Teste/digraph/src/main/java/com/mycompany/digraph/MyFrame.java'
+'E:/Unicamp/4Semestre/POO2/Projeto1/Teste/digraph/src/main/java/com/mycompany/digraph/TextConversion.java'
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\src\main\java = 1662741995463
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\allclasses-index.html = 1662921847956
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\allpackages-index.html = 1662921847971
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\copy.svg = 1662921848178
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\element-list = 1662921847503
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\help-doc.html = 1662921848107
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\index-all.html = 1662921848082
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\index.html = 1662921848089
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\jquery-ui.overrides.css = 1662921848314
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\member-search-index.js = 1662921848014
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\module-search-index.js = 1662921847995
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\overview-tree.html = 1662921847885
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\package-search-index.js = 1662921848005
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\script.js = 1662921848174
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\search.js = 1662921848186
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\serialized-form.html = 1662921847686
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\stylesheet.css = 1662921848153
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\tag-search-index.js = 1662921848017
+E:\Unicamp\4Semestre\POO2\Projeto1\Teste\digraph\target\site\apidocs\type-search-index.js = 1662921848010

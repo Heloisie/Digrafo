@@ -35,12 +35,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Component id="btn_send" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="t_message" min="-2" max="-2" attributes="0"/>
-                      <Component id="input_area" min="-2" pref="292" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="t_message" alignment="0" max="32767" attributes="0"/>
+                  <Component id="input_area" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
@@ -63,7 +61,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="t_message">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Archive names (comma separated):"/>
+        <Property name="text" type="java.lang.String" value="Archive names (comma separated - NO spaces after comma):"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="input_area">

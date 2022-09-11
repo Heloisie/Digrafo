@@ -1,11 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.digraph;
 
-import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -19,12 +18,18 @@ import javax.swing.JOptionPane;
  * @version 1.0
  */
 public class FileTransform {
+    
     /**Methods*/
+    
+    /**Default Constructor*/
+    public FileTransform(){
+    }
+
     /**Sorts the value (String) of an element in a Tree Map.
      * @param treeMap Tree Map to be sorted.
      * @param key Key of the value to be sorted.
      */
-    public static void sortTreeMapValues(TreeMap<String, String> treeMap, String key){
+    public static void sortTreeMapValues(TreeMap<String, String> treeMap, String key) {
         String[] sortedValue = treeMap.get(key).split(",");
         Arrays.sort(sortedValue);
         treeMap.replace(key, Arrays.toString(sortedValue)
@@ -60,24 +65,23 @@ public class FileTransform {
                     }
                 }
             }
-            
-            System.out.println(digraphs);
             return digraphs;
         }
     }
+    
     /**Creates the CSV file and writes on it
-     * @param fileWords The Array List to be used.
+     * @param text The TreeMap to be used.
      * @param pathCSVfile the path to the file the would be writed
-     * @return void
      */
     public static void createCSVFile(TreeMap<String, String> text, String pathCSVfile){
-        try {
-            FileWriter writer = new FileWriter(pathCSVfile);
+        try (BufferedWriter writer = new BufferedWriter(
+                    new OutputStreamWriter(new FileOutputStream(pathCSVfile), StandardCharsets.ISO_8859_1))){
+                      
             for(Map.Entry<String, String> entry : text.entrySet()) {
                 writer.write(entry.getKey() + ", " + entry.getValue() + "\n");
             }
             writer.close();
-            JOptionPane.showMessageDialog(null, "O arquivo CSV foi criado verifique o diretorio files",
+            JOptionPane.showMessageDialog(null, "O arquivo CSV: " + pathCSVfile + " foi criado, verifique o diretorio definido",
             "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "O programa não foi capaz de criar o arquivo CSV",
