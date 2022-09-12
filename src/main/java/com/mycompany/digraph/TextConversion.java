@@ -32,8 +32,7 @@ public class TextConversion {
         ArrayList<String> pathScanned = new ArrayList<>();
         String[] list;
 
-        String text = path;
-        list = text.split(",");
+        list = path.split(",");
         for (int i = 0; i < list.length; i++) {
             pathScanned.add(list[i]);
         }
