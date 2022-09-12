@@ -56,7 +56,7 @@ public class TextConversion {
 
     /**
      * Method that read a file and return an ArrayList with all the formated words
-     * @param pathFileS String - path to the txt file
+     * @param pathFileS String - txt file path
      * @return String - FileWords
      */
     public static ArrayList<String> readFile(String pathFileS){

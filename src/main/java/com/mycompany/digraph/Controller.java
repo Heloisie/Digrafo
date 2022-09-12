@@ -17,7 +17,7 @@ public class Controller {
     public Controller() {}
     
     /**Method that calls TextConversion object and its method
-     * @param path - path to the txt file
+     * @param path - txt file path
      * */
     public static void createProgram(String path){
         ArrayList<String> pathScanned = TextConversion.readPathFile(path);

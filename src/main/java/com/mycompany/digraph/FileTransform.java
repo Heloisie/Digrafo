@@ -66,7 +66,7 @@ public class FileTransform {
     
     /**Creates the CSV file and writes on it
      * @param text The TreeMap to be used.
-     * @param pathCSVfile the path to the file the would be writed
+     * @param pathCSVfile CSV file path to be written
      */
     public static void createCSVFile(TreeMap<String, String> text, String pathCSVfile){
         try (BufferedWriter writer = new BufferedWriter(
