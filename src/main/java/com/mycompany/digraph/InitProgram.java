@@ -19,10 +19,4 @@ public class InitProgram {
     public static void main(String[] args) throws IOException {
         Controller.createView();
     }
-    
-    /** Method that calls the Controller
-     * @param userText - text input fro user*/
-    public static void callController(String userText){
-        Controller.createProgram(userText);
-    }
 }
