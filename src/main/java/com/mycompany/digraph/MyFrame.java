@@ -82,7 +82,7 @@ public class MyFrame extends javax.swing.JFrame {
     private void btn_sendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sendActionPerformed
 
         String userText=input_Text.getText();
-        InitProgram.callController(userText);
+        Controller.createProgram(userText);
         input_Text.setText("");
     }//GEN-LAST:event_btn_sendActionPerformed
 
